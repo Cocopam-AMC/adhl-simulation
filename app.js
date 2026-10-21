@@ -175,7 +175,7 @@ $("roomBtn").onclick=()=>{locationMode="ROOM";$("roomBtn").classList.add("active
 $("corridorBtn").onclick=()=>{locationMode="CORRIDOR";$("corridorBtn").classList.add("active");$("roomBtn").classList.remove("active");};
 $("startSession").onclick=()=>{
   subjectId=$("subjectId").value.trim();if(!subjectId){alert("대상자 ID를 입력해주세요.");return;}
-  restSec=Number($("restSec").value);if(!Number.isFinite(restSec)||restSec<60||restSec>120){alert("휴식시간은 60~120초로 설정해주세요.");return;}
+  restSec=Number($("restSec").value);if(!Number.isFinite(restSec)||restSec<10||restSec>120){alert("휴식시간은 10~120초로 설정해주세요.");return;}
   voiceEnabled=$("voiceOn").value==="on";if(voiceEnabled)speak("음성 안내를 시작합니다.");
   sequence=shuffle(locationMode==="ROOM"?ROOM_ACTIVITIES:CORRIDOR_ACTIVITIES);currentIndex=0;logs=[];renderActivity();
 };
