@@ -30,7 +30,9 @@
     .pauseBanner{background:#fff0c9;border:1px solid #e9c96c;color:#6a5311;border-radius:14px;padding:14px;text-align:center;font-size:20px;font-weight:800;margin:12px 0}.footer{margin-top:18px;text-align:center}
     .summaryList{font-size:17px;line-height:1.8}.pill{display:inline-block;background:#e9f7f5;color:#126d64;border-radius:999px;padding:4px 10px;font-weight:800;margin:3px}
     @media(max-width:560px){.utilityRow{grid-template-columns:1fr}.top h1{font-size:22px}}
-  </style>
+  
+    .nextPrompt{font-size:1.05rem;font-weight:800;color:#0f766e;margin:8px 0 4px;}
+</style>
 </head>
 <body>
 <div class="wrap">
@@ -74,16 +76,15 @@
     <div class="progress" id="progress"></div>
     <div class="utilityRow"><button class="utilityBtn" id="prevActivityBtn" type="button">← 이전 동작</button><button class="utilityBtn" id="pauseActivityBtn" type="button">⏸ 일시정지</button></div>
     <div id="pauseBanner" class="pauseBanner hidden">일시정지 중</div>
+    <div class="nextPrompt" id="nextPrompt">다음 동작 안내</div>
     <div class="activity-title" id="activityName"></div>
     <div class="category" id="activityCategory"></div>
     <div class="binary" id="binaryLabel"></div>
     <div class="instruction" id="activityInstruction"></div>
     <div class="target" id="activityTarget"></div>
 
-    <div id="readyPanel"><button class="btn" id="readyStart">준비 완료 / 시작</button></div>
-    <div id="countPanel" class="hidden"><div class="countdown" id="countdown">3</div></div>
+    <div id="readyPanel"><button class="btn" id="readyStart">동작 시작</button></div>
     <div id="runningPanel" class="hidden"><div class="timer" id="timer"></div><div class="status" id="runningStatus">동작 진행 중</div><button class="btn" id="manualComplete">동작 완료</button></div>
-    <div id="completedPanel" class="hidden"><div class="status">동작이 완료되었습니다.</div><button class="btn" id="goNext">다음 동작</button></div>
     <div class="footer"><button class="btn danger" id="abortSession">실험 종료</button></div>
   </section>
 
